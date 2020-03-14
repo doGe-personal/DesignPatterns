@@ -1,0 +1,8 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(îö©î8¡¨‘ı‹.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»àŠı
+y
+java:S1104	"WMake flyBehavior a static final constant or non-public and provide accessors if needed.(­ªïÿÿÿÿÿ8ßï³ı‹.
+{
+java:S1104
+"YMake quackBehavior a static final constant or non-public and provide accessors if needed.(¶ìÚÿÿÿÿÿ8ßï³ı‹.

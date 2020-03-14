@@ -1,0 +1,43 @@
+代理模式：
+    给某一个对象提供一个代理，并由代理对象来控制对真实对象的访问。代理模式是一种结构型设计模式。
+JDK动态代理
+    1.定义一个InvocationHandler实例,它负责实现接口的方法调用；
+    2.通过Proxy.newProxyInstance()创建interface实例，它需要3个参数：
+       - 使用的ClassLoader，通常就是接口类的ClassLoader；
+       - 需要实现的接口数组，至少需要传入一个接口进去；
+       - 用来处理接口方法调用的InvocationHandler实例
+    3.将返回的Object强制转型为接口
+
+CGLIB 创建动态代理类的模式是：
+    查找目标类上的所有非final的public类型的方法定义；
+    将这些方法的定义转换成字节码；
+    将组成的字节码转换成相应的代理的class对象；
+    实现 MethodInterceptor接口，用来处理对代理类上所有方法的请求
+
+JDK动态代理与CGLIB动态代理对比
+    JDK动态代理：基于Java反射机制实现，必须要实现了接口的业务类才能用这种办法生成代理对象。
+    cglib动态代理：基于ASM机制实现，通过生成业务类的子类作为代理类。
+      JDK Proxy 的优势：
+          最小化依赖关系，减少依赖意味着简化开发和维护，JDK 本身的支持，可能比 cglib 更加可靠。
+          平滑进行 JDK 版本升级，而字节码类库通常需要进行更新以保证在新版 Java 上能够使用。
+          代码实现简单。
+      基于类似 cglib 框架的优势：
+          无需实现接口，达到代理类无侵入
+          只操作我们关心的类，而不必为其他相关类增加工作量。
+          高性能
+
+java 反射慢的原因是什么
+    1.编译器不能对代码进行优化
+    2.所有被调用或者创建的东西都要被发现（比如找到类通过类名，方法匹配等）
+    3.所有的参数要通过装箱/拆箱、包装成数组，异常包装在InvocationTargetExceptions中以及重新抛出等方式包装。
+    4.Check that there's a parameterless constructor
+      校验是否有无参构造器
+      Check the accessibility of the parameterless constructor
+      校验无参构造器的可访问性
+      Check that the caller has access to use reflection at all
+      检查调用者是否可以使用反射
+      Work out (at execution time) how much space needs to be allocated
+      计算(在执行时)需要分配多少空间
+      Call into the constructor code (because it won't know beforehand that the constructor is empty)
+      调用构造函数代码(因为它事先不知道构造函数是空的)
+

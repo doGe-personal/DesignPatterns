@@ -1,0 +1,6 @@
+
+Z
+java:S1481"=Remove this unused "currentConditionsDisplay" local variable.(ÆÇ‘ç8·¹§þ‹.
+i
+java:S1854"LRemove this useless assignment to local variable "currentConditionsDisplay".(ÆÇ‘ç8·¹§þ‹.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±™‘ß

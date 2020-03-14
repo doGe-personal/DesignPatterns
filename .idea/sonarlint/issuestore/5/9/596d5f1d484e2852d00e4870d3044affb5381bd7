@@ -1,0 +1,17 @@
+
+\
+java:S1117!"?Rename "weatherData" which hides the field declared at line 14.(Áš’8›•Âş‹.
+L
+java:S1172"/Remove this unused method parameter "pressure".(Ëİä™8Š¨±ş‹.
+T
+java:S1874"2Remove this use of "Observable"; it is deprecated.(•ÍÈıùÿÿÿÿ8şÇ²ş‹.
+J
+java:S1068"/Remove this unused "weatherData" private field.(¶ôÉåúÿÿÿÿ
+T
+java:S1874"2Remove this use of "Observable"; it is deprecated.(¶ôÉåúÿÿÿÿ8ä©²ş‹.
+T
+java:S1874"2Remove this use of "Observable"; it is deprecated.(‹›Àüÿÿÿÿ8’ô±ş‹.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®¼Ò…
+M
+java:S1874"0Remove this use of "Observer"; it is deprecated.(ôÂÅà8ˆÎ±ş‹.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¨œÍŒøÿÿÿÿ
